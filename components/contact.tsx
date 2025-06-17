@@ -19,7 +19,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="  rounded-md flex flex-col items-center fixed top-1/4 left-0 gap-y-2">
+    <div className="  rounded-md flex flex-col items-center fixed top-1/4 left-0 gap-y-2 z-10">
       {contactInfo.map((contact, index) => (
         <Link
           key={index}
