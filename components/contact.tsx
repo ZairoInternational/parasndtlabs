@@ -24,7 +24,7 @@ const Contact = () => {
         <Link
           key={index}
           href={contact.href}
-          className=" p-2 bg-gradient-to-r from-green-500 to-blue-500 rounded-md"
+          className=" p-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-md"
         >
           {contact.icon}
         </Link>

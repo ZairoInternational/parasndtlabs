@@ -33,26 +33,26 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="relative grid grid-cols-2 gap-2">
+            <div className="relative grid grid-cols-2 gap-2 overflow-hidden">
               <img
                 src={"/img1.jpeg"}
                 alt="testing"
-                className=" rounded-md w-full h-full"
+                className=" rounded-md w-full h-full hover:scale-[330%] transition-all delay-0 duration-700"
               />
               <img
                 src={"/img2.jpg"}
                 alt="testing"
-                className=" rounded-md w-full h-full"
+                className=" rounded-md w-full h-full hover:scale-[330%] transition-all delay-0 duration-700"
               />
               <img
                 src={"/img3.jpg"}
                 alt="testing"
-                className=" rounded-md w-full h-full"
+                className=" rounded-md w-full h-full hover:scale-[330%] transition-all delay-0 duration-700"
               />
               <img
                 src={"/img4.jpg"}
                 alt="testing"
-                className=" rounded-md w-full h-full"
+                className=" rounded-md w-full h-full hover:scale-[330%] transition-all delay-0 duration-700"
               />
             </div>
           </div>

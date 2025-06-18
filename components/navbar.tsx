@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -13,7 +13,7 @@ export default function Navbar() {
     { name: "Services", href: "/services" },
     { name: "Industries", href: "/industries" },
     { name: "Contact", href: "/contact" },
-  ]
+  ];
 
   return (
     <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
@@ -24,8 +24,10 @@ export default function Navbar() {
             {/* <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">QT</span>
             </div> */}
-            <img src={"/paraslabs.jpg"} className=" h-16 w-20"/>
-            <span className="text-xl font-bold text-gray-900">Paras Inspection Service</span>
+            <img src={"/paraslabs.jpg"} className=" h-16 w-20" />
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-green-500 text-transparent bg-clip-text">
+              Paras Inspection Service
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -82,5 +84,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }
