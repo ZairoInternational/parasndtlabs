@@ -159,3 +159,23 @@ export const advancedServices = [
     imageUrl: "/paut-testing.jpg",
   },
 ];
+
+export const allServices = [
+  "Ultrasonic Testing",
+  "Radiography Testing",
+  "Liquid Penetrant Testing",
+  "Magnetic Particle Testing",
+  "Hardness Testing",
+  "Positive Material Identification",
+  "ECT/RFT/MFL/IRIS",
+  "Leak Testing",
+  "Oxide Scale Measurement",
+  "Remote Visual Inspection",
+  "PAUT/TOFD",
+  "Remaining Life Assessment",
+  "In-Situ Metallography",
+  "Post Weld Heat Treatment",
+  "NDT-Training & Certification",
+  "NDT Level-III Consultancy",
+  "Third Party Services",
+];
