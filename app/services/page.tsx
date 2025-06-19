@@ -7,8 +7,10 @@ import {
   FileCheck,
   Factory,
   Microscope,
+  ArrowRight,
 } from "lucide-react";
 import { advancedServices, conventionalServcies } from "@/utils";
+import QuoteButton from "@/components/reusable-components/testing-quote-button";
 
 export default function ServicesPage() {
   return (
@@ -57,12 +59,7 @@ export default function ServicesPage() {
                   <p className=" text-gray-600 leading-relaxed text-justify">
                     {service.description}
                   </p>
-                  <Link
-                    href="/quote"
-                    className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-sm transition-colors"
-                  >
-                    Get Testing Quote
-                  </Link>
+                  <QuoteButton />
                 </div>
                 <div
                   className={`relative ${
@@ -113,12 +110,7 @@ export default function ServicesPage() {
                   <p className=" text-gray-600 leading-relaxed text-justify">
                     {service.description}
                   </p>
-                  <Link
-                    href="/quote"
-                    className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-sm transition-colors"
-                  >
-                    Get Testing Quote
-                  </Link>
+                  <QuoteButton />
                 </div>
                 <div
                   className={`relative ${
@@ -130,7 +122,7 @@ export default function ServicesPage() {
                   <img
                     src={`/testing/${service.imageUrl}`}
                     alt="Product testing laboratory"
-                    className="rounded-lg shadow-xl w-full h-full"
+                    className="rounded-lg shadow-xl w-full h-full -rotate-3 hover:rotate-0 transform transition-all duration-300"
                   />
                 </div>
               </div>
@@ -170,12 +162,7 @@ export default function ServicesPage() {
                   corrosion are irreversible and essential to predict remaining
                   life.
                 </p>
-                <Link
-                  href="/quote"
-                  className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-sm transition-colors mt-4"
-                >
-                  Get Testing Quote
-                </Link>
+                <QuoteButton />
               </div>
               <div className=" border border-black">
                 <img
@@ -212,12 +199,7 @@ export default function ServicesPage() {
                   vessels, main steam pipes, pipelines and all type of
                   structures.
                 </p>
-                <Link
-                  href="/quote"
-                  className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-sm transition-colors mt-4"
-                >
-                  Get Testing Quote
-                </Link>
+                <QuoteButton />
               </div>
               <div className=" border border-black">
                 <img
@@ -258,12 +240,7 @@ export default function ServicesPage() {
                   stresses. <br />
                   Tempered metal
                 </p>
-                <Link
-                  href="/quote"
-                  className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-sm transition-colors mt-4"
-                >
-                  Get Testing Quote
-                </Link>
+                <QuoteButton />
               </div>
               <div className=" border border-black">
                 <img
