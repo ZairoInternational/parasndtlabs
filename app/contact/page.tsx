@@ -13,6 +13,7 @@ import type React from "react";
 import { useState } from "react";
 
 import { allServices } from "@/utils";
+import { sendEmail } from "@/lib/mailer";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -26,9 +27,16 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    sendEmail(formData);
     alert("Thank you for your message! We'll get back to you soon.");
+    setFormData({
+      name: "",
+      email: "",
+      company: "",
+      phone: "",
+      service: "",
+      message: "",
+    });
   };
 
   const handleChange = (
@@ -177,12 +185,13 @@ export default function ContactPage() {
                       htmlFor="phone"
                       className="block text-sm font-medium text-gray-700"
                     >
-                      Phone Number
+                      Phone Number *
                     </label>
                     <input
                       id="phone"
                       name="phone"
                       type="text"
+                      required
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -195,13 +204,14 @@ export default function ContactPage() {
                     htmlFor="service"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Service Interest
+                    Service Interest *
                   </label>
                   <select
                     id="service"
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
+                    required
                     className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   >
                     {allServices.map((service, index) => (

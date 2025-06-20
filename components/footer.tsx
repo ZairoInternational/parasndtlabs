@@ -48,16 +48,16 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <span className="text-gray-400">Product Testing</span>
+                <span className="text-gray-400">Ultrasonic Testing</span>
               </li>
               <li>
-                <span className="text-gray-400">Factory Audits</span>
+                <span className="text-gray-400">Radiography Testing</span>
               </li>
               <li>
-                <span className="text-gray-400">Quality Inspection</span>
+                <span className="text-gray-400">Liquid Penetrant Testing</span>
               </li>
               <li>
-                <span className="text-gray-400">Compliance Testing</span>
+                <span className="text-gray-400">Magnetic Particle Testing</span>
               </li>
             </ul>
           </div>
@@ -68,11 +68,11 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+91 72288 08525</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-green-400" />
-                <span className="text-gray-400">info@qualitytestpro.com</span>
+                <span className="text-gray-400">info@parasndtlabs.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400" />

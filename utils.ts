@@ -12,7 +12,12 @@ export const conventionalServcies = [
         acoustic properties.
         Non-hazardous to nearby personnel, equipment or materials. Highly automated and portable operations possiblelmmediate
         results can be obtained.`,
-    imageUrl: "/ultrasonic-testing.jpg",
+    imageUrl: [
+      "/ultrasonic-testing1.jpg",
+      "/ultrasonic-testing2.jpg",
+      "/ultrasonic-testing3.jpg",
+      "/ultrasonic-testing4.jpg",
+    ],
   },
   {
     name: "Radiography Testing",

@@ -1,14 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
-import {
-  CheckCircle,
-  Shield,
-  Search,
-  FileCheck,
-  Factory,
-  Microscope,
-  ArrowRight,
-} from "lucide-react";
+import { CheckCircle, Microscope } from "lucide-react";
+
 import { advancedServices, conventionalServcies } from "@/utils";
 import QuoteButton from "@/components/reusable-components/testing-quote-button";
 

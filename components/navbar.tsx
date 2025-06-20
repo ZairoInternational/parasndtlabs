@@ -41,12 +41,12 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Link
+            {/* <Link
               href="/quote"
               className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-sm transition-colors"
             >
               Request Quote
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile Navigation Toggle */}

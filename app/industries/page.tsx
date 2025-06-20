@@ -1,240 +1,181 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Shirt, Smartphone, Home, Car, Utensils, Gamepad2 } from "lucide-react"
+import {
+  Car,
+  Home,
+  Shirt,
+  Factory,
+  Gamepad2,
+  Utensils,
+  Smartphone,
+  Fuel,
+  Biohazard,
+  Wind,
+  Radiation,
+  Atom,
+  Shield,
+  BrickWall,
+} from "lucide-react";
+import { JSX } from "react";
+import Link from "next/link";
+import Image from "next/image";
+
+import QuoteButton from "@/components/reusable-components/testing-quote-button";
+
+type Industry = {
+  name: string;
+  description: string;
+  imageUrl: string;
+  icon: JSX.Element;
+};
+
+export const industries: Industry[] = [
+  {
+    name: "Manufacturing Industry",
+    description:
+      "Non-Destructive Testing (NDT) is a key part of quality assurance in the manufacturing sector. It allows for the detection of surface and subsurface defects in raw materials and finished products without causing any damage. By ensuring the integrity of components during production, NDT helps manufacturers maintain high safety and quality standards. It also supports compliance with industry regulations and reduces the risk of costly product recalls. As manufacturing processes become more advanced, the need for reliable inspection techniques continues to grow. NDT provides the confidence needed to meet performance and durability expectations.",
+    imageUrl: "",
+    icon: <Factory className=" text-blue-600" />,
+  },
+  {
+    name: "Oil & Gas - Onshore & Offshore",
+    description:
+      "The oil and gas industry operates in some of the most demanding environments, both onshore and offshore. NDT is essential for maintaining the integrity of critical assets, helping to identify early signs of corrosion, fatigue, or structural damage. Regular inspection through NDT minimizes the risk of leaks, failures, and unplanned shutdowns, which can be extremely costly and hazardous. These techniques allow for safe operation while avoiding disruption to production. NDT also plays a vital role in extending asset lifespan and ensuring environmental and worker safety. Its non-invasive nature makes it ideal for inspecting hard-to-reach or hazardous areas.",
+    imageUrl: "",
+    icon: <Fuel className=" text-green-600" />,
+  },
+  {
+    name: "Chemicals/Fertilizers",
+    description:
+      "In the chemical and fertilizer industries, equipment often operates under high pressure and in corrosive environments. NDT is used to inspect the condition of critical infrastructure without halting operations, making it a cost-effective solution for regular maintenance. By detecting internal and external flaws, it helps prevent leaks, equipment failure, and environmental hazards. The use of NDT improves plant reliability, worker safety, and regulatory compliance. It also aids in planning maintenance schedules and reducing downtime. This proactive approach enhances overall operational efficiency and sustainability in chemical processing facilities.",
+    imageUrl: "",
+    icon: <Biohazard className=" text-blue-600" />,
+  },
+  {
+    name: "Wind Mill",
+    description:
+      "As renewable energy sources grow in importance, NDT supports the wind energy sector by ensuring the safety and performance of wind turbine components. These systems are subject to constant environmental stress and vibration, making regular inspection critical. NDT helps identify structural flaws, material fatigue, and other defects before they lead to serious damage. Since inspections can be performed without dismantling components, NDT is ideal for minimizing downtime. It contributes to more efficient maintenance planning and longer equipment life. Ultimately, it supports the safe and sustainable operation of wind farms.",
+    imageUrl: "",
+    icon: <Wind className=" text-green-600" />,
+  },
+  {
+    name: "Power Plant",
+    description:
+      "Power plants—whether fossil-fuel, nuclear, or renewable—depend on the continuous operation of complex and high-stress systems. NDT plays a vital role in ensuring the reliability of these systems by detecting cracks, wear, and material degradation without interrupting service. By monitoring the condition of components in real time, operators can plan preventive maintenance more effectively. This helps avoid unplanned outages and costly repairs. NDT enhances the safety of plant personnel and supports compliance with strict regulatory standards. Its application improves the overall efficiency and lifespan of power generation infrastructure.",
+    imageUrl: "",
+    icon: <Radiation className=" text-blue-600" />,
+  },
+  {
+    name: "Petrochemical Refineries",
+    description:
+      "Petrochemical refineries handle flammable and hazardous substances, making safety and reliability top priorities. NDT provides a non-invasive method for inspecting equipment under continuous operation, helping identify early-stage corrosion, erosion, or material fatigue. These techniques are critical in preventing environmental incidents and ensuring regulatory compliance. Regular testing ensures that essential systems remain operational and safe, even under harsh chemical conditions. NDT also supports lifecycle management by assessing component durability. Its use ultimately reduces repair costs and supports long-term operational stability.",
+    imageUrl: "",
+    icon: <Atom className=" text-green-600" />,
+  },
+  {
+    name: "Defence",
+    description:
+      "In the defence industry, precision and reliability are non-negotiable. NDT is used extensively to verify the structural integrity of components used in aircraft, naval vessels, and defense equipment—without compromising the usability of the part. By identifying defects that may not be visible to the naked eye, NDT enhances the safety, functionality, and readiness of mission-critical assets. These inspections must meet strict quality and documentation standards, making accuracy essential. The non-destructive nature of the testing is especially valuable when dealing with expensive or limited-quantity materials. NDT helps defence organizations maintain safety and performance while reducing risk.",
+    imageUrl: "",
+    icon: <Shield className=" text-blue-600" />,
+  },
+  {
+    name: "Cement plant",
+    description:
+      "Cement plants rely on heavy machinery and large-scale equipment that must operate reliably under intense working conditions. NDT techniques are employed to monitor structural integrity and detect early signs of fatigue, wear, or cracking. This enables maintenance teams to act before problems escalate, avoiding unexpected failures and production stoppages. Because the equipment is large and complex, non-destructive testing is ideal for inspecting critical areas without dismantling. By improving predictive maintenance practices, NDT helps increase uptime and extend equipment lifespan. It also contributes to safer working environments and better cost control.",
+    imageUrl: "",
+    icon: <BrickWall className=" text-green-600" />,
+  },
+];
 
 export default function IndustriesPage() {
   return (
     <div className="min-h-screen">
+      <section className=" w-full">
+        <img src="/industries.png" alt="industries" className=" mx-auto" />
+      </section>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 to-green-50 py-20 px-4">
         <div className="container mx-auto max-w-6xl text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Industries We Serve</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Industries We Serve
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our comprehensive testing and inspection services span across multiple industries, ensuring quality and
-            compliance for diverse product categories.
+            Our comprehensive testing and inspection services span across
+            multiple industries, ensuring quality and compliance for diverse
+            product categories.
           </p>
         </div>
       </section>
 
-      {/* Industries Grid */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Textiles & Apparel */}
-            <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow p-8">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                <Shirt className="w-8 h-8 text-blue-600" />
+      {/* Industries */}
+      <section className=" px-4 mt-8">
+        {/* <h1 className=" text-2xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-t from-green-500 to-blue-500 text-transparent bg-clip-text my-6 flex justify-center">
+          Conventional Services
+        </h1> */}
+        <div className="container mx-auto max-w-6xl mt-4">
+          <div className="grid gap-12">
+            {industries.map((industry, index) => (
+              <div
+                key={index}
+                className={`grid lg:grid-cols-2 gap-x-12 gap-y-8 items-center`}
+              >
+                <div
+                  className={`space-y-6 ${
+                    index % 2 === 0
+                      ? " order-last md:order-first"
+                      : "order-last md:order-last"
+                  }`}
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                      {/* <Factory className="w-6 h-6 text-blue-600" /> */}
+                      {industry.icon && industry.icon}
+                    </div>
+                    <h2 className=" text-xl sm:text-3xl font-bold text-gray-900">
+                      {industry.name}
+                    </h2>
+                  </div>
+                  <p className=" text-gray-600 leading-relaxed text-justify">
+                    {industry.description}
+                  </p>
+                  <QuoteButton />
+                </div>
+                <div
+                  className={`relative ${
+                    index % 2 === 1
+                      ? " order-first md:order-first"
+                      : "order-first md:order-last"
+                  }`}
+                >
+                  <img
+                    src={`/${industry.imageUrl}`}
+                    alt="Product testing laboratory"
+                    className="rounded-lg shadow-xl w-full h-full border border-black"
+                  />
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Textiles & Apparel</h3>
-              <p className="text-gray-600 mb-6">
-                Comprehensive testing for fabric quality, colorfastness, safety standards, and compliance with
-                international textile regulations.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-2 mb-6">
-                <li>• Fabric composition analysis</li>
-                <li>• Colorfastness testing</li>
-                <li>• Chemical safety testing</li>
-                <li>• Physical performance testing</li>
-              </ul>
-              <Image
-                src="/placeholder.svg?height=200&width=300"
-                alt="Textile testing"
-                width={300}
-                height={200}
-                className="rounded-lg w-full"
-              />
-            </div>
-
-            {/* Electronics */}
-            <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow p-8">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                <Smartphone className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Electronics</h3>
-              <p className="text-gray-600 mb-6">
-                Electrical safety, EMC testing, and regulatory compliance for consumer electronics and industrial
-                equipment.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-2 mb-6">
-                <li>• Electrical safety testing</li>
-                <li>• EMC/EMI testing</li>
-                <li>• FCC/CE compliance</li>
-                <li>• Performance validation</li>
-              </ul>
-              <Image
-                src="/placeholder.svg?height=200&width=300"
-                alt="Electronics testing"
-                width={300}
-                height={200}
-                className="rounded-lg w-full"
-              />
-            </div>
-
-            {/* Home & Garden */}
-            <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow p-8">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                <Home className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Home & Garden</h3>
-              <p className="text-gray-600 mb-6">
-                Safety and quality testing for furniture, home appliances, garden tools, and household products.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-2 mb-6">
-                <li>• Furniture safety testing</li>
-                <li>• Chemical emissions testing</li>
-                <li>• Durability testing</li>
-                <li>• Material safety analysis</li>
-              </ul>
-              <Image
-                src="/placeholder.svg?height=200&width=300"
-                alt="Home products testing"
-                width={300}
-                height={200}
-                className="rounded-lg w-full"
-              />
-            </div>
-
-            {/* Automotive */}
-            <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow p-8">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                <Car className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Automotive</h3>
-              <p className="text-gray-600 mb-6">
-                Comprehensive testing for automotive components, materials, and systems to ensure safety and
-                performance.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-2 mb-6">
-                <li>• Component durability testing</li>
-                <li>• Material compatibility</li>
-                <li>• Environmental testing</li>
-                <li>• Safety compliance</li>
-              </ul>
-              <Image
-                src="/placeholder.svg?height=200&width=300"
-                alt="Automotive testing"
-                width={300}
-                height={200}
-                className="rounded-lg w-full"
-              />
-            </div>
-
-            {/* Food Contact Materials */}
-            <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow p-8">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                <Utensils className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Food Contact Materials</h3>
-              <p className="text-gray-600 mb-6">
-                Testing for kitchenware, food packaging, and materials that come into contact with food products.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-2 mb-6">
-                <li>• Migration testing</li>
-                <li>• FDA compliance</li>
-                <li>• EU food contact regulations</li>
-                <li>• Chemical safety analysis</li>
-              </ul>
-              <Image
-                src="/placeholder.svg?height=200&width=300"
-                alt="Food contact testing"
-                width={300}
-                height={200}
-                className="rounded-lg w-full"
-              />
-            </div>
-
-            {/* Toys & Children's Products */}
-            <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow p-8">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                <Gamepad2 className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Toys & Children's Products</h3>
-              <p className="text-gray-600 mb-6">
-                Specialized safety testing for toys and children's products to ensure compliance with strict safety
-                standards.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-2 mb-6">
-                <li>• CPSIA compliance</li>
-                <li>• EN71 toy safety</li>
-                <li>• Chemical safety testing</li>
-                <li>• Mechanical hazard testing</li>
-              </ul>
-              <Image
-                src="/placeholder.svg?height=200&width=300"
-                alt="Toy safety testing"
-                width={300}
-                height={200}
-                className="rounded-lg w-full"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Industry Expertise */}
-      <section className="bg-gray-50 py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Industry Expertise</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our deep understanding of industry-specific requirements ensures accurate testing and compliance
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900">Specialized Knowledge</h3>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Our team of experts brings decades of experience across various industries, understanding the unique
-                challenges and requirements of each sector. We stay current with evolving regulations and standards to
-                provide the most accurate and relevant testing services.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                  <span className="text-gray-700">Industry-specific testing protocols</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
-                  <span className="text-gray-700">Regulatory compliance expertise</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                  <span className="text-gray-700">Market access requirements</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
-                  <span className="text-gray-700">Risk assessment and mitigation</span>
-                </li>
-              </ul>
-            </div>
-            <div className="relative">
-              <Image
-                src="/placeholder.svg?height=400&width=500"
-                alt="Industry expertise"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-xl"
-              />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-green-600 py-20 px-4">
+      <section className="bg-gradient-to-r from-blue-600 to-green-600 py-20 px-4 mt-16">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Need Testing for Your Industry?</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Need Testing for Your Industry?
+          </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Contact our industry experts to discuss your specific testing requirements and compliance needs.
+            Contact our industry experts to discuss your specific testing
+            requirements and compliance needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            {/* <Link
               href="/quote"
               className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-blue-600 bg-white hover:bg-gray-100 rounded-md shadow-sm transition-colors"
             >
               Get Industry Quote
-            </Link>
+            </Link> */}
             <Link
               href="/contact"
               className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-transparent border border-white hover:bg-white hover:text-blue-600 rounded-md shadow-sm transition-colors"
@@ -245,5 +186,5 @@ export default function IndustriesPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
