@@ -127,7 +127,7 @@ export default function AboutPage() {
                 height={200}
                 className="rounded-full mx-auto mb-6"
               />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Sarah Johnson</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Naeem Iraki </h3>
               <p className="text-blue-600 font-medium mb-4">Chief Executive Officer</p>
               <p className="text-gray-600">
                 15+ years in quality assurance with expertise in international standards and regulatory compliance.
@@ -142,7 +142,7 @@ export default function AboutPage() {
                 height={200}
                 className="rounded-full mx-auto mb-6"
               />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Michael Chen</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Shehzad Iraki </h3>
               <p className="text-green-600 font-medium mb-4">Chief Technology Officer</p>
               <p className="text-gray-600">
                 Leading innovation in testing methodologies and laboratory automation technologies.
@@ -157,7 +157,7 @@ export default function AboutPage() {
                 height={200}
                 className="rounded-full mx-auto mb-6"
               />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Emily Rodriguez</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Shehbaz Iraki</h3>
               <p className="text-blue-600 font-medium mb-4">Chief Operations Officer</p>
               <p className="text-gray-600">
                 Ensuring operational excellence and customer satisfaction across all service lines.
